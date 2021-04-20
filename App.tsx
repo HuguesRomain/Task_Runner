@@ -1,10 +1,10 @@
 import React from 'react';
-import { HomeView } from './wonder/apps/Home';
+import { ArticlesView } from './wonder/apps/UserSpace/screens/Articles';
 
 
 export default function App() {
   return (
-    <HomeView />
+    <ArticlesView/>
   );
 }
 
