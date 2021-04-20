@@ -21,12 +21,14 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "quidem molestiae enim"
+      "title": "quidem molestiae enim",
+      "urlImage": "https://i.pinimg.com/originals/1e/1d/2d/1e1d2d5817e8215acd03270827f94154.jpg"
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "sunt qui excepturi placeat culpa"
+      "title": "sunt qui excepturi placeat culpa",
+      "urlImage": "https://static.lexpress.fr/medias_11191/w_1887,h_1056,c_crop,x_0,y_443/w_480,h_270,c_fill,g_north/v1477034513/manhattan-4_5729899.jpg"
     }
   ],
   "photos": [
@@ -41,6 +43,12 @@
       "id": 2,
       "title": "reprehenderit est deserunt velit ipsam",
       "url": "https://i.pinimg.com/originals/91/ed/15/91ed15491cd5c8e6a4b5c3ec8d1c164a.jpg"
+    },
+    {
+      "albumId": 2,
+      "id": 2,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://www.lemagamericain.fr/wp-content/uploads/2017/05/brooklyn-manhattan-bridge-cc-by-sa-2.0-flickr-dumbonyc-640x429.jpg"
     }
   ],
   "posts": [
