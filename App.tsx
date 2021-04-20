@@ -4,7 +4,7 @@ import { HomeView } from './wonder/apps/UserSpace';
 
 export default function App() {
   return (
-    <HomeView/>
+    <HomeView />
   );
 }
 
