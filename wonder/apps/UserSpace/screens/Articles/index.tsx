@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, FlatList, View } from 'react-native';
 
+
 import styled from 'styled-components/native';
 
 import {ArticleItemPreview} from './Components/ArticleItemPreview'
@@ -20,8 +21,9 @@ const ArticlesStyle = styled.View`
 `;
 
 
-export const ArticlesView = () => {
+export const ArticlesView = ({navigation}: any) => {
   const [data, setData] = useState([]);
+
 
   useEffect(() => {
     (async () => {
@@ -35,7 +37,7 @@ export const ArticlesView = () => {
     <ArticlesStyle>
       <FlatList
         data={data}
-        renderItem={({ item }: { item: Article }) => <ArticleItemPreview article={item}/>}
+        renderItem={({ item }: { item: Article }) => <ArticleItemPreview article={item} navigation={navigation}/>}
         keyExtractor={item => item.id.toString()}
       />
     </ArticlesStyle>

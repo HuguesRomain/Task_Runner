@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, Image, View } from 'react-native';
+import { Text, Image, TouchableOpacity } from 'react-native';
+
+
 
 
 import styled from 'styled-components/native';
@@ -40,15 +42,17 @@ const CommentsPillStyled = styled.View`
 export const ArticleItemPreview = ({...props}) => {
   const article: Article = props.article
   return (
-    <ArticleItemStyled>
-      <ArticleImageStyled source={{uri: article.image}}></ArticleImageStyled>
-      <ArticlePreviewInfosStyled>
-        <CommentsPillStyled>
-          <Text style={{color: '#FF5F91'}}>{article.comments.length + ' Comments'}</Text>
-        </CommentsPillStyled>
-        <ArticleTitleStyled>{article.title}</ArticleTitleStyled>
-      </ArticlePreviewInfosStyled>
-      <Image style={{height: 15, marginRight: 15, alignSelf: 'center'}} source={require('../../../../../../assets/Path.png')}></Image>
-    </ArticleItemStyled>
+    <TouchableOpacity onPress={() => console.log(props.navigation)}>
+      <ArticleItemStyled >
+        <ArticleImageStyled source={{uri: article.image}}></ArticleImageStyled>
+        <ArticlePreviewInfosStyled>
+          <CommentsPillStyled>
+            <Text style={{color: '#FF5F91'}}>{article.comments.length + ' Comments'}</Text>
+          </CommentsPillStyled>
+          <ArticleTitleStyled>{article.title}</ArticleTitleStyled>
+        </ArticlePreviewInfosStyled>
+        <Image style={{height: 15, marginRight: 15, alignSelf: 'center'}} source={require('../../../../../../assets/Path.png')}></Image>
+      </ArticleItemStyled>
+    </TouchableOpacity>
   )
 }
