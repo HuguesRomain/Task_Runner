@@ -1,11 +1,60 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "hello"
+      "name": "Johanna",
+      "email": "Johanna.Dupond@gmail.com",
+      "city": "New York City",
+      "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
+      "phone": "+1 212-739-0437"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "todos": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Test",
+      "completed": false
+    }
+  ],
+  "albums": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "quidem molestiae enim"
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "sunt qui excepturi placeat culpa"
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "id": 1,
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 1,
+      "id": 2,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://via.placeholder.com/600/771796"
+    }
+  ],
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    }
+  ]
 }
