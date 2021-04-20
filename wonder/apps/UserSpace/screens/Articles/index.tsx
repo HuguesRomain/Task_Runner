@@ -1,17 +1,42 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, FlatList, View } from 'react-native';
 
 import styled from 'styled-components/native';
 
-const ViewStyle = styled.View`
-  background-color: red;
+import {ArticleItemPreview} from './Components/ArticleItemPreview'
+
+export interface Article {
+  userId: number,
+  id: number,
+  title: string,
+  body: string
+}
+
+
+const ArticlesStyle = styled.View`
+  flex: 1
 `;
 
+
 export const ArticlesView = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const result = await fetch('https://my-json-server.typicode.com/HuguesRomain/Task_Runner/posts')
+      const data = await result.json()
+      setData(data);
+    })();
+  }, []);
+
   return (
-    <ViewStyle>
-      <Text>Les articles</Text>
-    </ViewStyle>
+    <ArticlesStyle>
+      <FlatList
+        data={data}
+        renderItem={({ item }: { item: Article }) => <ArticleItemPreview article={item}/>}
+        keyExtractor={item => item.id.toString()}
+      />
+    </ArticlesStyle>
   );
 }
 
