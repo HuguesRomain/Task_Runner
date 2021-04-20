@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 export const HomeView = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="TravelersListView">
         <Stack.Screen name="TravelersListView" component={TravelersListView} />
         <Stack.Screen name="MapView" component={MapView} />
       </Stack.Navigator>
