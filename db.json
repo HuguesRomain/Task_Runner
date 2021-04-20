@@ -7,5 +7,20 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "name": "Johanna",
+      "email": "Johanna.Dupond@gmail.com",
+      "city": "New York City",
+      "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
+      "phone": "+1 212-739-0437",
+      "todos": [
+        {
+          "name": "Test",
+          "done": false
+        }
+      ]
+    }
+  ] 
 }
