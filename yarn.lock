@@ -2157,6 +2157,21 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
+"@types/react-native-swipe-gestures@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.4.tgz#bf436ca375c6b307e63ef45c7a1ef9c96028b709"
+  integrity sha512-ZTrg82+WwwNcDvF76OZORZFej2//sp7CovVPTXPHRZN96K64WIViW1Ix3gvvEwAAcmybi7SbxGQsbBexJ3rz+Q==
+  dependencies:
+    react-native-swipe-gestures "*"
+
+"@types/react-native-vector-icons@^6.4.6":
+  version "6.4.6"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.6.tgz#848e3b14572def56212cafbf5cb1254b445bfb41"
+  integrity sha512-lAyxNfMd5L1xZvXWsGcJmNegDf61TAp40uL6ashNNWj9W3IrDJO59L9+9inh0Y2MsEZpLTdxzVU8Unb4/0FQng==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
 "@types/react-native@*", "@types/react-native@~0.63.2":
   version "0.63.52"
   resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.63.52.tgz"
@@ -10320,6 +10335,11 @@ react-native-screens@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.1.1.tgz"
   integrity sha512-cjhK85T8LQ7uqqmwvLb8FKNk1RfgJd1jtbUm1lOxUmJreFki5Wh2SUlx0DAvNG35U6quGD15KPYRducGa+M04g==
+
+react-native-swipe-gestures@*:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz#a172cb0f3e7478ccd681fd36b8bfbcdd098bde7c"
+  integrity sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw==
 
 react-native-web@~0.13.12:
   version "0.13.18"
