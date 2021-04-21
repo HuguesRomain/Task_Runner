@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, FlatList, View, Button } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import styled from 'styled-components/native';
 
@@ -21,7 +21,6 @@ export class Article {
 }
 
 const ArticleViewStyled = styled.View`
-  flex: 1
   padding: 20px
 `;
 
@@ -52,13 +51,19 @@ export const ArticleItemView = ({ ...props }) => {
     })();
   }, []);
 
+  const handleCommentAdd = (comment: Comment) => {
+    setArticle({...article, comments: [...article.comments, comment]});
+  }
+
   return (
-    <ArticleViewStyled>
-      <CommentsPill commentsLength={article.comments.length}/>
-      <ArticleTitleStyled>{article.title}</ArticleTitleStyled>
-      <ArticleBodyStyled>{article.body}</ArticleBodyStyled>
-      <CommentsSection comments={article.comments}/>
-    </ArticleViewStyled>
+    <ScrollView>
+      <ArticleViewStyled>
+        <CommentsPill commentsLength={article.comments.length}/>
+        <ArticleTitleStyled>{article.title}</ArticleTitleStyled>
+        <ArticleBodyStyled>{article.body}</ArticleBodyStyled>
+        <CommentsSection comments={article.comments} onAddComment={handleCommentAdd}/>
+      </ArticleViewStyled>
+    </ScrollView>
   );
 }
 
