@@ -4,9 +4,6 @@ import { View, FlatList, Image, Button, Text, TouchableOpacity} from 'react-nati
 
 import styled from 'styled-components/native';
 
-const Content = styled.View`
-    height: 100%;
-`;
 
 const Header = styled.View`
     position: relative;
@@ -14,7 +11,13 @@ const Header = styled.View`
     align-items: center;
     flex-direction: row;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+`;
+
+const Content = styled.View`
+    width: 100%;
+    height: 100%;
+    padding: 5% 8%;
 `;
 
 const Title = styled.Text`
@@ -23,14 +26,13 @@ const Title = styled.Text`
     font-size: 16px;
     color: #665BDF;
     font-weight: bold;
-    margin-right: 10%;
+    margin-right: 15px;
 `;
 
 const Photo = styled.Image`
     width: 156px;
     height: 156px;
     border-radius: 10px;
-    margin: 20px;
 `;
 
 const CarouselContent = styled.View`
@@ -101,7 +103,17 @@ export const PhotosView = ({ route, navigation }: any) => {
     }, []);
 
     return (
-        <Content>
+        <>
+            <Header>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Icon
+                        name="chevron-left"
+                        size={20}
+                        color="#1F2557"
+                    />
+                </TouchableOpacity>
+                <Title>{albumTitle}</Title>
+            </Header>
             {carousel && 
                 <CarouselContent>
                     <Cross onPress={() => setCarousel(false)} >
@@ -131,22 +143,20 @@ export const PhotosView = ({ route, navigation }: any) => {
                     <CarouselTitle>Tokyo Hotel</CarouselTitle>
                 </CarouselContent> 
             }
-            <Header>
-                <Button title="Back" onPress={() => navigation.goBack()} />
-                <Title>{albumTitle}</Title>
-            </Header>
-            <FlatList
-                contentContainerStyle={{alignSelf: 'center'}}
-                data={photos}
-                numColumns={2}
-                renderItem={({item}) => (
-                    <TouchableOpacity onPress={() => setCarousel(true)}>
-                        <Photo
-                            source={{ uri: item.url }}
-                        />
-                    </TouchableOpacity>
-                )}
-            />
-        </Content>
+            <Content>
+                <FlatList
+                    columnWrapperStyle={{justifyContent: 'space-between'}}
+                    data={photos}
+                    numColumns={2}
+                    renderItem={({item}) => (
+                        <TouchableOpacity onPress={() => setCarousel(true)}>
+                            <Photo
+                                source={{ uri: item.url }}
+                            />
+                        </TouchableOpacity>
+                    )}
+                />
+            </Content>
+        </>
     );
 }

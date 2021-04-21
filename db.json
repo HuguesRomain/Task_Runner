@@ -29,6 +29,12 @@
       "id": 2,
       "title": "New York",
       "urlImage": "https://static.lexpress.fr/medias_11191/w_1887,h_1056,c_crop,x_0,y_443/w_480,h_270,c_fill,g_north/v1477034513/manhattan-4_5729899.jpg"
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Portraits",
+      "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjdRvgrbaWurBR41Ua1loUxHmIhBiZsL3VKKxqfoB3Wo5VNjGTP6Cvvk-UrKZD8amJris&usqp=CAU"
     }
   ],
   "photos": [
