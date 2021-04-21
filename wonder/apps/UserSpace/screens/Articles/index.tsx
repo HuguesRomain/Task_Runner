@@ -17,7 +17,7 @@ export interface Article {
 
 
 const ArticlesStyle = styled.View`
-  flex: 1
+  flex: 1;
 `;
 
 

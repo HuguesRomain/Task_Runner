@@ -2,9 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 
-export const BucketListView = ({navigation}) => {
-  console.log(navigation)
-
+export const BucketListView = () => {
   return (
     <View></View>
   );
