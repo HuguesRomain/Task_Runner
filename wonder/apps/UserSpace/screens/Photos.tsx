@@ -82,12 +82,22 @@ export const PhotosView = ({ route, navigation }: any) => {
     const { albumId, albumTitle } = route.params;
     const [photos, setPhotos] = useState<Photos[]>();
     const [carousel, setCarousel] = useState<Boolean>(false);
+    const [actualPhoto, setActualPhoto] = useState<Photos>();
 
     interface Photos {
         albumId: number;
         id: number;
         title: string;
         url: string;
+    }
+
+    const goRight= (index: number) => {
+        const next = index + 1;
+        if (photos && photos.length <= next) {
+            setActualPhoto(photos[next])
+        } else {
+            setActualPhoto(photos && photos[0])
+        }
     }
 
 
@@ -124,14 +134,16 @@ export const PhotosView = ({ route, navigation }: any) => {
                         />
                     </Cross>
                     <Carousel>
-                        <ButtonCarousel onPress={() => navigation.goBack()} >
+                        <ButtonCarousel onPress={() => {
+                            
+                        }} >
                             <Icon
                                 name="chevron-left"
                                 size={30}
                                 color="white"
                             />
                         </ButtonCarousel>
-                        <CarouselImage source={{ uri: "https://i.pinimg.com/originals/1e/1d/2d/1e1d2d5817e8215acd03270827f94154.jpg" }}/>
+                        <CarouselImage source={{ uri: actualPhoto?.url }}/>
                         <ButtonCarousel onPress={() => navigation.goBack()} >
                             <Icon
                                 name="chevron-right"
@@ -140,7 +152,7 @@ export const PhotosView = ({ route, navigation }: any) => {
                             />
                         </ButtonCarousel>
                     </Carousel>
-                    <CarouselTitle>Tokyo Hotel</CarouselTitle>
+                    <CarouselTitle>{actualPhoto?.title}</CarouselTitle>
                 </CarouselContent> 
             }
             <Content>
@@ -149,7 +161,10 @@ export const PhotosView = ({ route, navigation }: any) => {
                     data={photos}
                     numColumns={2}
                     renderItem={({item}) => (
-                        <TouchableOpacity onPress={() => setCarousel(true)}>
+                        <TouchableOpacity onPress={() => {
+                            setCarousel(true);
+                            setActualPhoto(item);
+                        }}>
                             <Photo
                                 source={{ uri: item.url }}
                             />

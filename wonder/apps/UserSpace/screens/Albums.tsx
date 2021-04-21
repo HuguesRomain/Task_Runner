@@ -67,9 +67,9 @@ export const AlbumsView = ({ navigation }: any) => {
       .then( value => value.json())
       .then((resp) => {
         const firstAlbum = resp[0];
-        const restAlbum = resp.splice(1, 1);
+        resp.splice(0, 1);
         setFirstAlbum(firstAlbum);
-        setAlbums(restAlbum)
+        setAlbums(resp)
       })
       .catch((err) => console.log(err));
   };
