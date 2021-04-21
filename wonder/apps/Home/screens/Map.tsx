@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 
 export const MapView = () => {
   return (
-    <View></View>
+    <View>
+      <Text>wadawda</Text>
+    </View>
   );
 }
 
