@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Image, TouchableOpacity } from 'react-native';
 
-
+import {CommentsPill} from './CommentsPill'
 
 
 import styled from 'styled-components/native';
@@ -42,13 +42,13 @@ const CommentsPillStyled = styled.View`
 export const ArticleItemPreview = ({...props}) => {
   const article: Article = props.article
   return (
-    <TouchableOpacity onPress={() => console.log(props.navigation)}>
+    <TouchableOpacity onPress={() => props.navigation.navigate('ArticleItemView', {
+      articleId: article.id,
+    })}>
       <ArticleItemStyled >
         <ArticleImageStyled source={{uri: article.image}}></ArticleImageStyled>
         <ArticlePreviewInfosStyled>
-          <CommentsPillStyled>
-            <Text style={{color: '#FF5F91'}}>{article.comments.length + ' Comments'}</Text>
-          </CommentsPillStyled>
+          <CommentsPill commentsLength={article.comments.length}/>
           <ArticleTitleStyled>{article.title}</ArticleTitleStyled>
         </ArticlePreviewInfosStyled>
         <Image style={{height: 15, marginRight: 15, alignSelf: 'center'}} source={require('../../../../../../assets/Path.png')}></Image>

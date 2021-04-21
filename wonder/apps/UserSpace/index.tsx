@@ -13,12 +13,13 @@ const Stack = createStackNavigator();
 export const HomeView = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Albums">
+      <Stack.Navigator initialRouteName="Articles">
         <Stack.Screen name="Infos" component={InfosView} />
         <Stack.Screen name="BucketList" component={BucketListView} />
         <Stack.Screen name="Albums" component={AlbumsView} />
         <Stack.Screen name="Photos" component={PhotosView} />
         <Stack.Screen name="Articles" component={ArticlesView} />
+        <Stack.Screen name="ArticleItemView" component={ArticleItemView} />
       </Stack.Navigator>
     </NavigationContainer>
   );
