@@ -21,12 +21,20 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "quidem molestiae enim"
+      "title": "Tokyo",
+      "urlImage": "https://i.pinimg.com/originals/1e/1d/2d/1e1d2d5817e8215acd03270827f94154.jpg"
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "sunt qui excepturi placeat culpa"
+      "title": "New York",
+      "urlImage": "https://static.lexpress.fr/medias_11191/w_1887,h_1056,c_crop,x_0,y_443/w_480,h_270,c_fill,g_north/v1477034513/manhattan-4_5729899.jpg"
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Portraits",
+      "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjdRvgrbaWurBR41Ua1loUxHmIhBiZsL3VKKxqfoB3Wo5VNjGTP6Cvvk-UrKZD8amJris&usqp=CAU"
     }
   ],
   "photos": [
@@ -34,13 +42,19 @@
       "albumId": 1,
       "id": 1,
       "title": "accusamus beatae ad facilis cum similique qui sunt",
-      "url": "https://via.placeholder.com/600/92c952"
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67I-A7pK9k1iJwxsaiCdpDYo1ZXF1suNtdobClwRhIdcKmLDgcWEO5mN-OwkV8ESvRKg&usqp=CAU"
     },
     {
       "albumId": 1,
       "id": 2,
       "title": "reprehenderit est deserunt velit ipsam",
-      "url": "https://via.placeholder.com/600/771796"
+      "url": "https://i.pinimg.com/originals/91/ed/15/91ed15491cd5c8e6a4b5c3ec8d1c164a.jpg"
+    },
+    {
+      "albumId": 2,
+      "id": 1,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "url": "https://www.lemagamericain.fr/wp-content/uploads/2017/05/brooklyn-manhattan-bridge-cc-by-sa-2.0-flickr-dumbonyc-640x429.jpg"
     }
   ],
   "posts": [
@@ -48,13 +62,25 @@
       "userId": 1,
       "id": 1,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "image": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+      "comments": [
+        {
+          "body": "Very good article"
+        }
+      ]
     },
     {
       "userId": 1,
       "id": 2,
       "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+      "image": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+      "comments": [
+        {
+          "body": "Very good article"
+        }
+      ]
     }
   ]
 }

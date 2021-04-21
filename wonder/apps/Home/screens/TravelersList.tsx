@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+<<<<<<< HEAD
 import { FlatList } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
@@ -56,10 +57,17 @@ const DATA = [
     title: 'Third Item',
   },
 ];
+=======
+import styled from 'styled-components/native';
+>>>>>>> 5ade6b385cd6eaa72e0e43a6f5e605982c41e70a
 
+const ViewSytle = styled.View`
+  background-color: red;
+`;
 
 export const TravelersListView = () => {
   return (
+<<<<<<< HEAD
     <ItemsWrapper>
       <FlatList
         data={DATA}
@@ -67,6 +75,11 @@ export const TravelersListView = () => {
         keyExtractor={item => item.id}
       />
     </ItemsWrapper>
+=======
+    <ViewSytle>
+      <Text>Hello World</Text>
+    </ViewSytle>
+>>>>>>> 5ade6b385cd6eaa72e0e43a6f5e605982c41e70a
   );
 }
 
