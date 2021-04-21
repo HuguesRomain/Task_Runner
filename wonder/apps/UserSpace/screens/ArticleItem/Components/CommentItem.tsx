@@ -6,10 +6,8 @@ import styled from 'styled-components/native';
 import {Comment} from '../index'
 
 const CommentStyled = styled.View`
-  flex: 1;
   padding: 20px 0;
   flex-direction: row;
-  border-width: 1px;
   border: none;
   border-bottom-width: 1px;
   border-color: #e8e8e8;
