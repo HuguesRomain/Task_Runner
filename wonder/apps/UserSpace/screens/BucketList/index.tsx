@@ -29,7 +29,7 @@ export const BucketListView = () => {
 
 
     const getTodos = () => {
-        fetch(`https://my-json-server.typicode.com/HuguesRomain/Task_Runner/todos`)
+        fetch(`https://my-json-server.typicode.com/HuguesRomain/Task_Runner/todos?userId=${1}`)
             .then( value => value.json())
             .then((resp) => setTodos(resp))
             .catch((err) => console.log(err));

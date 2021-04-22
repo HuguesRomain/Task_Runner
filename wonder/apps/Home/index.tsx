@@ -45,6 +45,7 @@ export type ProfilesType = {
   id: number,
   name: string,
   email: string,
+  picture: string,
   city: string,
   address: string,
   phone:string,

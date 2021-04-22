@@ -75,9 +75,9 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
       <ContentTravelItemWrapper>
         <PicAndName>
           <Pic />
-          {/* <ProfilePic
-            source={{ uri: profile && profile.urlImage }}
-          /> */}
+          <ProfilePic
+            source={{ uri: profile && profile.picture }}
+          />
           <Name>{profile.name}</Name>
         </PicAndName>
         <MailAndPlace>
