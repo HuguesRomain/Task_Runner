@@ -6,7 +6,29 @@
       "email": "Johanna.Dupond@gmail.com",
       "city": "New York City",
       "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
-      "phone": "+1 212-739-0437"
+      "phone": "+1 212-739-0437",
+      "longitude": 37.23455,
+      "latitude": -122.3564
+    },
+    {
+      "id": 2,
+      "name": "Daryl",
+      "email": "Johanna.Dupond@gmail.com",
+      "city": "New York City",
+      "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
+      "phone": "+1 212-739-0437",
+      "longitude": 37.23452,
+      "latitude": -122.234234
+    },
+    {
+      "id": 3,
+      "name": "Fabrice",
+      "email": "Johanna.Dupond@gmail.com",
+      "city": "New York City",
+      "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
+      "phone": "+1 212-739-0437",
+      "longitude": 37.356745,
+      "latitude": -122.432245
     }
   ],
   "todos": [
