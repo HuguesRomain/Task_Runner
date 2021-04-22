@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { InfosView } from './screens/Infos';
 import { BucketListView } from './screens/BucketList';
-import { AlbumsView } from './screens/Albums';
-import { PhotosView } from './screens/Photos';
-import {ArticlesView} from './screens/Articles/index';
+import { AlbumsView } from './screens/Albums/index';
+import { PhotosView } from './screens/Photos/index';
+import { ArticlesView } from './screens/Articles/index';
 import { ArticleItemView } from './screens/ArticleItem';
 
 const Stack = createStackNavigator();
