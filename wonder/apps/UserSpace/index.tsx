@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { InfosView } from './screens/Infos';
-import { BucketListView } from './screens/BucketList';
+import { BucketListView } from './screens/BucketList/index';
 import { AlbumsView } from './screens/Albums/index';
 import { PhotosView } from './screens/Photos/index';
 import { ArticlesView } from './screens/Articles/index';
