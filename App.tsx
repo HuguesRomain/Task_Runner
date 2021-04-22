@@ -8,10 +8,11 @@ import {
   useSafeAreaInsets,
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
+import { ProfileView } from './wonder/apps/UserSpace';
 
 export default function App() {
   return (
-      <HomeView />
+      <ProfileView />
   );
 }
 
