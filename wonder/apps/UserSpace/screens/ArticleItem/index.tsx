@@ -21,7 +21,7 @@ export class Article {
 }
 
 const ArticleViewStyled = styled.View`
-  padding: 20px
+  padding: 20px;
 `;
 
 const ArticleTitleStyled = styled.Text`
