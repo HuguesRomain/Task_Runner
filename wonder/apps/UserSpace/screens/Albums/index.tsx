@@ -47,7 +47,7 @@ export const AlbumsView = ({ navigation }: any) => {
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-between'}}
         renderItem={({item}) => (
-            <AlbumItems navigation={navigation} album={item}/>
+          <AlbumItems navigation={navigation} album={item}/>
         )}
       />
     </Content>

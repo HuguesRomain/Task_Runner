@@ -1,8 +1,11 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { useState, useEffect } from 'react';
 import { Text, FlatList, View } from 'react-native';
 
 
 import styled from 'styled-components/native';
+import { ArticleItemView } from '../ArticleItem';
 
 import {ArticleItemPreview} from './Components/ArticleItemPreview'
 
@@ -21,7 +24,7 @@ const ArticlesStyle = styled.View`
 `;
 
 
-export const ArticlesView = ({navigation}: any) => {
+const ArticlesListView = ({navigation}: any) => {
   const [data, setData] = useState([]);
 
 
@@ -44,3 +47,13 @@ export const ArticlesView = ({navigation}: any) => {
   );
 }
 
+const Stack = createStackNavigator();
+
+export const ArticleView = () => {
+  return (
+    <Stack.Navigator initialRouteName="Articles">
+      <Stack.Screen name="Articles" component={ArticlesListView} />
+      <Stack.Screen name="ArticleItemView" component={ArticleItemView} />
+    </Stack.Navigator>
+  )
+}

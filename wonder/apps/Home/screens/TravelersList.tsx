@@ -14,7 +14,6 @@ const TravelItemWrapper = styled.View`
   flex-direction: row;
   background-color: #FFE5ED;
   width: 370px;
-  margin: 10px 0;
   padding: 18px 16px; 
   border-radius: 16px;
  ` 
@@ -117,11 +116,15 @@ const ItemsWrapper = styled.View`
   width: 100%;
 `
 
+const FlatListStyled = styled(FlatList)`
+  height: 100%;
+`
+
 
 export const TravelersListView = ({...props}: any) => {
   return (
     <ItemsWrapper>
-      <FlatList
+      <FlatListStyled
         data={props.profiles}
         renderItem={({ item }: { item: ProfilesType }) => <TravelerItem profile={item}/>}
         keyExtractor={item => item.id}
