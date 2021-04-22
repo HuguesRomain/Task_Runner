@@ -59,9 +59,7 @@ export const HomeView = () => {
   const getProfiles = () => {
     fetch('https://my-json-server.typicode.com/HuguesRomain/Task_Runner/users')
       .then( value => value.json())
-      .then((resp) => {
-        setProfiles(resp)
-      })
+      .then((resp) => setProfiles(resp))
       .catch((err) => console.log(err));
   };
 

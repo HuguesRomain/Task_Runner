@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { View, FlatList, Image, Button, Text, TouchableOpacity, Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Carousel from 'react-native-snap-carousel';
+import { Photos } from "../index";
 
 import styled from 'styled-components/native';
 
@@ -50,8 +51,8 @@ const Cross = styled.TouchableOpacity`
 
 export const CarouselCards = ({ ...props }) => {
     const setCarousel: any = props.setCarousel;
-    const photoIndex: any = props.photoIndex;
-    const CarouselCardItem: any = props.CarouselCardItem;
+    const photoIndex: number = props.photoIndex;
+    const CarouselCardItem: Photos[] = props.CarouselCardItem;
 
     const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 

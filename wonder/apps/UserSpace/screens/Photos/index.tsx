@@ -6,6 +6,13 @@ import { CarouselCards } from './components/Carousel';
 
 import styled from 'styled-components/native';
 
+export interface Photos {
+    albumId: number;
+    id: number;
+    title: string;
+    url: string;
+}
+
 const Content = styled.View`
     width: 100%;
     height: 100%;
@@ -28,13 +35,6 @@ export const PhotosView = ({ route, navigation }: any) => {
     const [carousel, setCarousel] = useState<Boolean>(false);
     const [photoIndex, setPhotoIndex] = useState<Number>();
 
-    interface Photos {
-        albumId: number;
-        id: number;
-        title: string;
-        url: string;
-    }
-
     const getPhotos = () => {
         fetch(`https://my-json-server.typicode.com/HuguesRomain/Task_Runner/photos?albumId=${albumId}`)
             .then( value => value.json())
@@ -47,7 +47,7 @@ export const PhotosView = ({ route, navigation }: any) => {
     }, []);
 
     return (
-        <>
+        <>  
             <Header navigation={navigation} albumTitle={albumTitle} />
             { carousel && 
                 <CarouselCards setCarousel={setCarousel} photoIndex={photoIndex} CarouselCardItem={photos} /> 
