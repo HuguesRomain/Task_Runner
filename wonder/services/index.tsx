@@ -1,9 +1,9 @@
 import React from 'react';
 
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 
-const ViewSytle = styled.View`
+const ViewSytle = styled.view`
   background-color: 'red';
 `;
 
@@ -16,3 +16,4 @@ export const Servies = () => {
 }
 
 
+ 
