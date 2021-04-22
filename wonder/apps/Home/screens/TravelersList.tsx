@@ -1,38 +1,112 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
-<<<<<<< HEAD
 import { FlatList } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from 'styled-components/native';
+import { ProfilesType } from '..';
+import { color } from '../../../const';
 
 
-
-const TravelerItemWrapper = styled.View`
+const TravelItemWrapper = styled.View`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   background-color: #FFE5ED;
-  height: 50px;
   width: 370px;
   margin: 10px 0;
+  padding: 18px 16px; 
+  border-radius: 16px;
+ ` 
+
+const ContentTravelItemWrapper = styled.View`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const PicAndName = styled.View`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `
 
 const Pic = styled.View`
   height: 48px;
   width: 48px;
   background-color: grey;
-  margin: 0 10px;
+  border-radius: 16px;
+  margin-right: 10px;
 `
 
-const TravelerItem = () => {
+const ProfilePic = styled.Image`
+  width: 100%;
+  height: 156px;
+  border-radius: 16px;
+`;
+
+
+
+const MailAndPlace = styled.View`
+  display: flex;
+  height: 50%;
+  justify-content: space-around;
+`
+const IconAndText = styled.View`
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+`
+
+const Name = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  color: ${color.title};
+`
+
+const TextInfo = styled.Text`
+  font-size: 12px;
+  color: ${color.text};
+`;
+
+const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
   return (
-    <TravelerItemWrapper>
-      <PicAndName>
-        <Pic />
-        <Text>Username</Text>
-      </PicAndName>
-    </TravelerItemWrapper>
+    <TravelItemWrapper>
+      <ContentTravelItemWrapper>
+        <PicAndName>
+          <Pic />
+          {/* <ProfilePic
+            source={{ uri: profile && profile.urlImage }}
+          /> */}
+          <Name>{profile.name}</Name>
+        </PicAndName>
+        <MailAndPlace>
+          <IconAndText>
+          <Icon
+            style={{ marginRight: 10 }}
+            name="envelope"
+            size={15}
+            color="#FF5F91"
+          />
+          <TextInfo>{profile.email}</TextInfo>
+          </IconAndText>
+          <IconAndText>
+            <Icon
+              style={{ marginRight: 10 }}
+              name="map-marker"
+              size={15}
+              color="#FF5F91"
+            />
+            <TextInfo>{profile.city}</TextInfo>
+          </IconAndText>
+        </MailAndPlace>
+      </ContentTravelItemWrapper>
+      <Icon
+        name="chevron-right"
+        size={15}
+        color={color.title}
+      />
+    </TravelItemWrapper>
   )
 }
 
@@ -43,43 +117,16 @@ const ItemsWrapper = styled.View`
   width: 100%;
 `
 
-const DATA = [
-  {
-    Fid: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    Name: 'irst Item',
-  },
-  {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
-  },
-];
-=======
-import styled from 'styled-components/native';
->>>>>>> 5ade6b385cd6eaa72e0e43a6f5e605982c41e70a
 
-const ViewSytle = styled.View`
-  background-color: red;
-`;
-
-export const TravelersListView = () => {
+export const TravelersListView = ({...props}: any) => {
   return (
-<<<<<<< HEAD
     <ItemsWrapper>
       <FlatList
-        data={DATA}
-        renderItem={TravelerItem}
+        data={props.profiles}
+        renderItem={({ item }: { item: ProfilesType }) => <TravelerItem profile={item}/>}
         keyExtractor={item => item.id}
       />
     </ItemsWrapper>
-=======
-    <ViewSytle>
-      <Text>Hello World</Text>
-    </ViewSytle>
->>>>>>> 5ade6b385cd6eaa72e0e43a6f5e605982c41e70a
   );
 }
 
