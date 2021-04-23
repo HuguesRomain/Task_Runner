@@ -1,9 +1,12 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
 import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { FirstAlbumItem } from './components/FirstAlbumItem'
 import { AlbumItems } from './components/AlbumItems'
+import { PhotosView } from '../Photos/';
 
 import styled from 'styled-components/native';
 
@@ -19,7 +22,7 @@ const Content = styled.View`
   display: flex;
 `;
 
-export const AlbumsView = ({ navigation }: any) => {
+const AlbumsListView = ({ navigation }: any) => {
   const [firstAlbum, setFirstAlbum] = useState<any>();
   const [albums, setAlbums] = useState<Album[]>();
 
@@ -51,6 +54,17 @@ export const AlbumsView = ({ navigation }: any) => {
         )}
       />
     </Content>
+  );
+}
+
+const Stack = createStackNavigator();
+
+export const AlbumsView = () => {
+  return(
+    <Stack.Navigator initialRouteName="Albums">
+      <Stack.Screen name="Albums" component={AlbumsListView} />
+      <Stack.Screen name="Photos" component={PhotosView} />
+    </Stack.Navigator>
   );
 }
 
