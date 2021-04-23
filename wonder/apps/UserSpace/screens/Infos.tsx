@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { View, Text } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 
 
 import styled from 'styled-components/native';
@@ -36,9 +37,8 @@ const Info = styled.Text`
   padding: 5px 0;
 `;
 
-export const InfosView = () => {
+export const InfosView = ({...props}: any) => {
   const [userInfo, setUserInfo] = useState<ProfilesType>();
-
   const getUsersInfo = () => {
     fetch(`https://my-json-server.typicode.com/HuguesRomain/Task_Runner/users?id=${1}`)
         .then( value => value.json())
@@ -52,25 +52,50 @@ export const InfosView = () => {
     getUsersInfo();
   }, []);
 
+  const MapStyled = styled(MapView)`
+  height: 100%;
+  width: 100%;
+`
+
+const MarkerStyled = styled(Marker)`
+  width: 30px;
+  height: 37px;
+`
+
   return (
+    <>
     <ContentInfo>
       <Content>
         <Legend>NAME</Legend>
-        <Info>{userInfo && userInfo.name}</Info>
+        <Info>{userInfo && props.profile.name}</Info>
       </Content>
       <Content>
         <Legend>EMAIL</Legend>
-        <Info>{userInfo && userInfo.email}</Info>
+        <Info>{userInfo && props.profile.email}</Info>
       </Content>
       <Content>
         <Legend>ADDRESS</Legend>
-        <Info>{userInfo && userInfo.address}</Info>
+        <Info>{userInfo && props.profile.address}</Info>
       </Content>
       <Content>
         <Legend>PHONE NUMBER</Legend>
-        <Info>{userInfo && userInfo.phone}</Info>
+        <Info>{userInfo && props.profile.phone}</Info>
       </Content>
     </ContentInfo>
+    <MapStyled
+      initialRegion={{
+        latitude: props.profile.latitude,
+        longitude: props.profile.longitude,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      }}
+    >
+      <MarkerStyled 
+        coordinate={{ latitude : props.profile.latitude , longitude : props.profile.longitude }} 
+        image={require("../../Home/components/atoms/marker.png")}
+      />
+    </MapStyled>
+    </>
   );
 }
 

@@ -61,7 +61,9 @@ const Stack = createStackNavigator();
 
 export const AlbumsView = () => {
   return(
-    <Stack.Navigator initialRouteName="Albums">
+    <Stack.Navigator screenOptions={{
+      headerShown: false
+      }} initialRouteName="Albums">
       <Stack.Screen name="Albums" component={AlbumsListView} />
       <Stack.Screen name="Photos" component={PhotosView} />
     </Stack.Navigator>

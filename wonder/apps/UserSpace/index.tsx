@@ -15,20 +15,46 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 const HeaderStyled = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${color.main};
-  height: 130px;
+  height: 200px;
+`
+
+const ProfilePic = styled.Image`
+  height: 48px;
+  width: 48px;
+  border-radius: 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+`;
+
+const Name = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 `
 
 const Tab = createMaterialTopTabNavigator();
 
-export const ProfileView = () => {
+export const ProfileView = ({...props}: any) => {
+  const profile = props.route.params.profile
   return (
     <>
-      <HeaderStyled />
-      <Tab.Navigator initialRouteName="Infos">
-        <Tab.Screen options={{
-            tabBarIcon: () => <Icon name="user" />,
-          }} name="Infos" component={InfosView} />
+      <HeaderStyled>
+        <ProfilePic source={{ uri: profile && profile.picture }} />
+        <Name>{profile.name}</Name>
+      </HeaderStyled>
+      <Tab.Navigator tabBarOptions={{
+          activeTintColor: 'white',
+          indicatorStyle:{backgroundColor: "white"},
+          labelStyle: { fontSize: 12 },
+          style: { color: "white", backgroundColor: color.main, borderColor: "white" },
+        }} initialRouteName="Infos">
+        <Tab.Screen name="Infos">
+          {props => <InfosView {...props} profile={profile}/>}
+        </Tab.Screen>
         <Tab.Screen name="BucketList" component={BucketListView} />
         <Tab.Screen name="Albums" component={AlbumsView} />
         <Tab.Screen name="Articles" component={ArticleView} />
