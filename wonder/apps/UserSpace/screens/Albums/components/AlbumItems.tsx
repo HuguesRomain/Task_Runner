@@ -47,9 +47,7 @@ export const AlbumItems = ({ ...props }) => {
                 });
             }}
         >
-            <ImageAlbum
-            source={{ uri: album.urlImage }}
-            />
+            <ImageAlbum source={{ uri: album.urlImage }} />
             <AlbumBottom>
             <TextAlbum>{album.title}</TextAlbum>
             <Icon

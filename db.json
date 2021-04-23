@@ -2,40 +2,67 @@
   "users": [
     {
       "id": 1,
-      "name": "Johanna",
-      "email": "Johanna.Dupond@gmail.com",
+      "name": "Leanne Graham",
+      "email": "leanne.graham@gmail.com",
+			"picture" : "https://images.unsplash.com/photo-1575075500178-c99ef905661a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=964&q=80",
       "city": "New York City",
       "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
       "phone": "+1 212-739-0437",
-      "longitude": 37.23455,
-      "latitude": -122.3564
+      "longitude": 40.683775,
+      "latitude": -73.995713
     },
     {
       "id": 2,
-      "name": "Daryl",
-      "email": "Johanna.Dupond@gmail.com",
-      "city": "New York City",
+      "name": "Josh Smith",
+      "email": "josh.smith@gmail.com",
+			"picture": "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2080&q=80",
+      "city": "Shanghai",
       "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
-      "phone": "+1 212-739-0437",
-      "longitude": 37.23452,
-      "latitude": -122.234234
+      "phone": "+1 212-739-0487",
+      "longitude": 73.995790,
+      "latitude": 40.724181
     },
     {
       "id": 3,
-      "name": "Fabrice",
-      "email": "Johanna.Dupond@gmail.com",
-      "city": "New York City",
+      "name": "Emily Jones",
+      "email": "emily.jones@gmail.com",
+			"picture" : "https://images.unsplash.com/photo-1510344914706-49ac7003d996?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1858&q=80",
+      "city": "Mexico",
       "address": "40th Floor, 17 State St Suite 4000, New York, NY 10004, États-Unis",
       "phone": "+1 212-739-0437",
-      "longitude": 37.356745,
-      "latitude": -122.432245
+      "longitude": 40.668809,
+      "latitude": 73.955462
     }
   ],
   "todos": [
     {
       "userId": 1,
       "id": 1,
-      "title": "Test",
+      "title": "Eat spicy ramens in Tokyo",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "Ride hot air balloons in Bangan, Myanmar",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Surf the Balinese waves",
+      "completed": false
+    },
+    {
+      "userId": 2,
+      "id": 5,
+      "title": "Walk on the wall of china",
+      "completed": false
+    },
+		{
+      "userId": 3,
+      "id": 6,
+      "title": "Watch the sunset in Bali",
       "completed": false
     }
   ],
@@ -64,7 +91,7 @@
       "albumId": 1,
       "id": 1,
       "title": "accusamus beatae ad facilis cum similique qui sunt",
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67I-A7pK9k1iJwxsaiCdpDYo1ZXF1suNtdobClwRhIdcKmLDgcWEO5mN-OwkV8ESvRKg&usqp=CAU"
+      "url": "https://images.unsplash.com/photo-1536768139911-e290a59011e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3375&q=80"
     },
     {
       "albumId": 1,
@@ -83,24 +110,52 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      "image": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+      "title": "Smart Spanish guide for travelers",
+      "body": "A trip to Spain is hard to describe in words, because the experience of the country is so visceral, so tactile. You don’t just “see” Spain, you experience it, with hearing, taste, smells, everything. The Iberian Peninsula has been a unique location in Europe since the Middle Ages, and that caused Spain to develop a culture that’s simultaneously European and singularly Spanish. The weather here is, like it’s people, smooth and steady and welcoming, making Spain a year-round destination for college travelers. So whether you decide to go during Spring Break or right before your next semester starts, Spain will be great. Fiestas, carnivals, and holy weeks cram the Spanish calendar year, so no matter when you go there’s an event going on somewhere. Read our Spain Travel Guides, travel to Spain, and learn what this colorful, lively country has to offer. So whether you decide to go during Spring Break or right before your next semester starts, Spain will be great. Fiestas, carnivals, and holy weeks cram the Spanish calendar year, so no matter when you go there’s an event going on somewhere. Read our Spain Travel Guides, travel to Spain, and learn what this colorful, lively country has to offer.",
+      "image": "https://842930.smushcdn.com/1760858/wp-content/uploads/2021/03/superscene-4.1-hero28.png?lossy=1&strip=1&webp=1",
       "comments": [
         {
-          "body": "Very good article"
+					"author": "Sean William",
+					"picture": "https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
+          "body": "Very good article. I think it's even  the best article I've read in my whole life."
+        },
+        {
+					"author": "Sandra Dove",
+					"picture": "https://images.unsplash.com/photo-1541257710737-06d667133a53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80",
+          "body": "Ah it's funny"
+        }
+      ]
+    },
+		{
+      "userId": 2,
+      "id": 2,
+      "title": "Top 10 places to see in Puglia, Italy",
+      "body": "Part of the charm of Puglia is its slow approach to everyday life. Southern Italy’s rising star has ancient farmland hemmed by a sun-bleached sandy coast and is where travellers come to escape the frenetic vibe of nearby Tuscany.This year the region’s beautiful range of private villas, many with private pools and always with gorgeous views, will be particularly popular, as it allows social distancing without compromising on the joy of travel.",
+      "image": "https://images.unsplash.com/photo-1569839955407-c0405a33cb94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3320&q=80",
+      "comments": [
+        {
+					"author": "Stacey Williams",
+					"picture": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80",
+          "body": "It makes you want to leave!"
         }
       ]
     },
     {
-      "userId": 1,
-      "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-      "image": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+      "userId": 3,
+      "id": 3,
+      "title": "Dubai - why it's so popular",
+      "body": "A trip to Spain is hard to describe in words, because the experience of the country is so visceral, so tactile. You don’t just “see” Spain, you experience it, with hearing, taste, smells, everything. The Iberian Peninsula has been a unique location in Europe since the Middle Ages, and that caused Spain to develop a culture that’s simultaneously European and singularly Spanish. The weather here is, like it’s people, smooth and steady and welcoming, making Spain a year-round destination for college travelers. So whether you decide to go during Spring Break or right before your next semester starts, Spain will be great. Fiestas, carnivals, and holy weeks cram the Spanish calendar year, so no matter when you go there’s an event going on somewhere. Read our Spain Travel Guides, travel to Spain, and learn what this colorful, lively country has to offer. So whether you decide to go during Spring Break or right before your next semester starts, Spain will be great. Fiestas, carnivals, and holy weeks cram the Spanish calendar year, so no matter when you go there’s an event going on somewhere. Read our Spain Travel Guides, travel to Spain, and learn what this colorful, lively country has to offer.",
+      "image": "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80",
       "comments": [
         {
-          "body": "Very good article"
+					"author": "Sean William",
+					"picture": "https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
+          "body": "Very good article. I think it's even  the best article I've read in my whole life."
+        },
+        {
+					"author": "Sandra Dove",
+					"picture": "https://images.unsplash.com/photo-1541257710737-06d667133a53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80",
+          "body": "Ah it's funny"
         }
       ]
     }

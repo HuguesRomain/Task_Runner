@@ -39,9 +39,10 @@ const Pic = styled.View`
 `
 
 const ProfilePic = styled.Image`
-  width: 100%;
-  height: 156px;
+  height: 48px;
+  width: 48px;
   border-radius: 16px;
+  margin-right: 10px;
 `;
 
 
@@ -73,10 +74,9 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
     <TravelItemWrapper>
       <ContentTravelItemWrapper>
         <PicAndName>
-          <Pic />
-          {/* <ProfilePic
-            source={{ uri: profile && profile.urlImage }}
-          /> */}
+          <ProfilePic
+            source={{ uri: profile && profile.picture }}
+          />
           <Name>{profile.name}</Name>
         </PicAndName>
         <MailAndPlace>
