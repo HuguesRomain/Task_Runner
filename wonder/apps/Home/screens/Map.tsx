@@ -30,7 +30,7 @@ export const MapViewComponent = ({...props}: any) => {
           <MarkerStyled 
             coordinate={{ latitude : profile.latitude , longitude : profile.latitude }} 
             image={require("../components/atoms/marker.png")}
-            key={i}
+            key={i.toString()}
           />
         )
       })}
