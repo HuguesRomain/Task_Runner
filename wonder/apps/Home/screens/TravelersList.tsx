@@ -7,7 +7,7 @@ import { ProfilesType } from '..';
 import { color } from '../../../const';
 
 
-const TravelItemWrapper = styled.View`
+const TravelItemWrapper = styled.TouchableOpacity`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,15 +69,20 @@ const TextInfo = styled.Text`
   color: ${color.text};
 `;
 
-const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
+const TravelerItem = ({ ...props }: any) => {
+  const navigation: any = props.navigation;
   return (
-    <TravelItemWrapper>
+    <TravelItemWrapper onPress={() => {
+        navigation.navigate('Profile', {
+          profile: props.profiles,
+        });
+       }}>
       <ContentTravelItemWrapper>
         <PicAndName>
           <ProfilePic
-            source={{ uri: profile && profile.picture }}
+            source={{ uri: props.profile && props.profile.picture }}
           />
-          <Name>{profile.name}</Name>
+          <Name>{props.profile.name}</Name>
         </PicAndName>
         <MailAndPlace>
           <IconAndText>
@@ -87,7 +92,7 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
             size={15}
             color="#FF5F91"
           />
-          <TextInfo>{profile.email}</TextInfo>
+          <TextInfo>{props.profile.email}</TextInfo>
           </IconAndText>
           <IconAndText>
             <Icon
@@ -96,7 +101,7 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
               size={15}
               color="#FF5F91"
             />
-            <TextInfo>{profile.city}</TextInfo>
+            <TextInfo>{props.profile.city}</TextInfo>
           </IconAndText>
         </MailAndPlace>
       </ContentTravelItemWrapper>
@@ -126,7 +131,7 @@ export const TravelersListView = ({...props}: any) => {
     <ItemsWrapper>
       <FlatListStyled
         data={props.profiles}
-        renderItem={({ item }: { item: ProfilesType }) => <TravelerItem profile={item}/>}
+        renderItem={({ item }: { item: ProfilesType }) => <TravelerItem {...props} profile={item}/>}
         keyExtractor={item => item.id}
       />
     </ItemsWrapper>
