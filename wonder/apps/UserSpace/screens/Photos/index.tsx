@@ -40,7 +40,7 @@ export const PhotosView = ({ route, navigation }: any) => {
             .then( value => value.json())
             .then((resp) => setPhotos(resp))
             .catch((err) => console.log(err));
-        };
+    };
 
     useEffect(() => {
         getPhotos();
