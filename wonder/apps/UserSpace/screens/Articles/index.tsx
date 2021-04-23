@@ -51,7 +51,9 @@ const Stack = createStackNavigator();
 
 export const ArticleView = () => {
   return (
-    <Stack.Navigator initialRouteName="Articles">
+    <Stack.Navigator screenOptions={{
+      headerShown: false
+      }} initialRouteName="Articles">
       <Stack.Screen name="Articles" component={ArticlesListView} />
       <Stack.Screen name="ArticleItemView" component={ArticleItemView} />
     </Stack.Navigator>

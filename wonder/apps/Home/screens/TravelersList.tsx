@@ -74,7 +74,7 @@ const TravelerItem = ({ ...props }: any) => {
   return (
     <TravelItemWrapper onPress={() => {
         navigation.navigate('Profile', {
-          profile: props.profiles,
+          profile: props.profile,
         });
        }}>
       <ContentTravelItemWrapper>
