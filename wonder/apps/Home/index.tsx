@@ -8,7 +8,6 @@ import styled from 'styled-components/native';
 import { color } from '../../const';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Loader from 'react-loader-spinner';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -73,7 +72,7 @@ export const HomeView = () => {
 
   
   return (
-    <NavigationContainer>
+    <>
       <HeaderHome>
         <InputStyled>
           <SearchIconWrapper>
@@ -109,6 +108,6 @@ export const HomeView = () => {
           <ActivityIndicator size="large" color={color.main} />
         </View>
         }  
-    </NavigationContainer>
+      </>
   );
 }

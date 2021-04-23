@@ -25,11 +25,12 @@ export const MapViewComponent = ({...props}: any) => {
         longitudeDelta: 0.0421,
       }}
     >
-      {props.profiles.map((profile: ProfilesType) => {
+      {props.profiles.map((profile: ProfilesType, i: number) => {
         return(
           <MarkerStyled 
             coordinate={{ latitude : profile.latitude , longitude : profile.latitude }} 
             image={require("../components/atoms/marker.png")}
+            key={i.toString()}
           />
         )
       })}

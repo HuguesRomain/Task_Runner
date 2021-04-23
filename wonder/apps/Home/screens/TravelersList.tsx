@@ -7,14 +7,13 @@ import { ProfilesType } from '..';
 import { color } from '../../../const';
 
 
-const TravelItemWrapper = styled.View`
+const TravelItemWrapper = styled.TouchableOpacity`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: #FFE5ED;
   width: 370px;
-  margin: 10px 0;
   padding: 18px 16px; 
   border-radius: 16px;
  ` 
@@ -40,9 +39,10 @@ const Pic = styled.View`
 `
 
 const ProfilePic = styled.Image`
-  width: 100%;
-  height: 156px;
+  height: 48px;
+  width: 48px;
   border-radius: 16px;
+  margin-right: 10px;
 `;
 
 
@@ -69,16 +69,20 @@ const TextInfo = styled.Text`
   color: ${color.text};
 `;
 
-const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
+const TravelerItem = ({ ...props }: any) => {
+  const navigation: any = props.navigation;
   return (
-    <TravelItemWrapper>
+    <TravelItemWrapper onPress={() => {
+        navigation.navigate('Profile', {
+          profile: props.profiles,
+        });
+       }}>
       <ContentTravelItemWrapper>
         <PicAndName>
-          <Pic />
           <ProfilePic
-            source={{ uri: profile && profile.picture }}
+            source={{ uri: props.profile && props.profile.picture }}
           />
-          <Name>{profile.name}</Name>
+          <Name>{props.profile.name}</Name>
         </PicAndName>
         <MailAndPlace>
           <IconAndText>
@@ -88,7 +92,7 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
             size={15}
             color="#FF5F91"
           />
-          <TextInfo>{profile.email}</TextInfo>
+          <TextInfo>{props.profile.email}</TextInfo>
           </IconAndText>
           <IconAndText>
             <Icon
@@ -97,7 +101,7 @@ const TravelerItem = ({ profile }: {profile: ProfilesType}) => {
               size={15}
               color="#FF5F91"
             />
-            <TextInfo>{profile.city}</TextInfo>
+            <TextInfo>{props.profile.city}</TextInfo>
           </IconAndText>
         </MailAndPlace>
       </ContentTravelItemWrapper>
@@ -117,13 +121,17 @@ const ItemsWrapper = styled.View`
   width: 100%;
 `
 
+const FlatListStyled = styled(FlatList)`
+  height: 100%;
+`
+
 
 export const TravelersListView = ({...props}: any) => {
   return (
     <ItemsWrapper>
-      <FlatList
+      <FlatListStyled
         data={props.profiles}
-        renderItem={({ item }: { item: ProfilesType }) => <TravelerItem profile={item}/>}
+        renderItem={({ item }: { item: ProfilesType }) => <TravelerItem {...props} profile={item}/>}
         keyExtractor={item => item.id}
       />
     </ItemsWrapper>
