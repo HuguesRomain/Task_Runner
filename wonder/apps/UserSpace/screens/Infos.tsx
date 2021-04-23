@@ -86,8 +86,8 @@ const MarkerStyled = styled(Marker)`
       initialRegion={{
         latitude: props.profile.latitude,
         longitude: props.profile.longitude,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitudeDelta: 2.9922,
+        longitudeDelta: 2.9421,
       }}
     >
       <MarkerStyled 
