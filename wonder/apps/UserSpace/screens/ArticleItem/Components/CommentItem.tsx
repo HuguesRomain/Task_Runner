@@ -34,9 +34,9 @@ export const CommentItem = ({ comment }: {comment: Comment}) => {
 
   return (
     <CommentStyled>
-      <AuthorImageStyled source={{uri: 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'}}></AuthorImageStyled>
+      <AuthorImageStyled source={{uri: comment.picture}}></AuthorImageStyled>
       <CommentInfosStyled>
-        <AuthorNameStyled>Le Nom</AuthorNameStyled>
+        <AuthorNameStyled>{comment.author}</AuthorNameStyled>
         <Text>{comment.body}</Text>
       </CommentInfosStyled>
     </CommentStyled>
