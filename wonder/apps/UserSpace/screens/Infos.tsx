@@ -18,7 +18,7 @@ export type ProfilesType = {
 
 const ContentInfo = styled.View`
   background-color: white;
-  padding: 20px 0;
+  padding: 20px 10px;
 `;
 
 const Content = styled.View`
